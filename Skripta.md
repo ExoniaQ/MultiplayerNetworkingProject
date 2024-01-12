@@ -20,6 +20,9 @@ LAN neboli Local Area Network je typ připojení používaný hlavně v minulost
 
 ### Peer to Peer
 
+![peertopeer](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/86325cc8-0664-4657-b472-9746786db7e9)
+
+
 Peer to peer je typ sítě, kde si všichni klienti posílají informace navzájem. Problém s touto sítí je ten, že se stoupajícím počtem hráčů, stoupá počet připojení a taky tlak na počítač, takže se skoro nedá škálovat. Také tu není žadný server nebo autorita na zabezpečení, která by prověřovala posílané údaje a zamezila v cheatování. Tento typ připojení byl používán u **Age of Empires**, protože v podstatě minimalizoval ztráty pro hráče se špatným připojením.
 
 ### Host
@@ -56,12 +59,14 @@ Toto může být použito například i v případě pohybu hráče, kdy hráč 
 
 Dále můžeme mít problém, když na sekundu ztratíme připojení a pohyb objektů ve hře se nachvíli sekne a poté zase pustí. V těchzo případech používáme Client-side prediction (předvídání ze strany klienta). Je to předvídání kam se objekt pohne pokud nedostaneme jeho pozici od serveru, například, když hráč jde rovně tak předvídáme, že půjde dál rovně. Také se tomu často říká rubber banding, protože při synchronizaci pozice objektu na serveru a u klienta se objekt pohne tam a zpátky jako guma.
 
-### Client authoritative control (Favor the shooter systém)
+### Client authoritative control
 
-Další problém je aby se klient mohl dobře pohybovat a nemusel čekat například sekundu 
+Další problém je aby se klient mohl dobře pohybovat a nemusel čekat například sekundu, aby se data poslala tam a zpátky, aby se mohl pohnout, to by nebylo moc příjemné na hraní. Měli bychom u takovýchto akcí zavést Client authoritative control, takzvaně dát klientovi moc vykonávat některé věci jako například pohyb. Bohužel info od klienta k serveru k dalšímu klientu putuje dost dlouhou dobu a může to být rozdíl mezi tím, kdo vystřelil první ve střílečce. Overwatch deverlopers v této situaci mají systém zvaný favor the shooter (dej přednost střelci), což znamená, že když vás někdo střelil na svojí obrazovce, tak většinou nechají tuhle střelu trefit.
 
 ## Networking frameworky
 
+Aby vám s tímto pomohli tak existují networking frameworky. Networking frameworky jsou sady nástrojů a knihoven k vyřešení věcí jako jsou sockety, porty, synchronizace a jiných problémů. Tímto se můžete soustředit na vývoj hry místo řešení problémů, co už vyřešil někdo jiný. Příklady populárních networking frameworků jsou Photon, Mirror, FishNet a GameSparks.
+
 ## Shrnutí
 
-Síťová integrace je důležitý proces při vytváření multiplayerových her. Je to cesta k propojení hráčů, aby si spolu mohli zahrát přes internet. Je to těžký a komplexní proces, který zahrnuje kroky jako připojení počítačů ke komunikaci a synchronizaci stavu hry mezi klienty a serverem. Proto existují i frameworky co udělají některé z těchto věcí za nás.
+Síťová integrace je důležitý proces při vytváření multiplayerových her. Je to cesta k propojení hráčů, aby si spolu mohli zahrát přes internet. Je to těžký a komplexní proces, který zahrnuje kroky jako připojení počítačů ke komunikaci a synchronizaci stavu hry mezi klienty a serverem.
