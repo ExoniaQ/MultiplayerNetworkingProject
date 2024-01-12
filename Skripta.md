@@ -1,24 +1,28 @@
 # Síťová integrace v multiplayerových hrách
 
-## Co to je a proč se používá?
+## Úvod
+
+Síťová integrace je, jak nám sám název napovídá, využití (integrace) síťových technologií v nečem. K čemu se ale používá v multiplayerových hrách? Používá se například k tomu, aby jste si s kamarády mohli užít zábavu z her společne, když zrovna nejste na stejném místě. Samozřejmě je dost dalších důvodů dělat multiplayerové hry, jako třeba přítomnost lidského protivníka, není totiž lepší protivník než jiný člověk. Také se multiplayerové hry dají skoro nekonečné hrát opakovaně, protože tam často hráči mají veliké množství možností se někde rozhodnout jinak, něco jinak udělat a tak podobně a vzhledem k tomu, že tuhle hraje více hráčů najednou jsou možnosti, že se stane uplně stejná hra mizivé.
 
 ## Offline a Online hry
 
-## Splitscreen/Local Multiplayer
+Multiplayerové hry lze rozdělit na dva typy. OFFline - hry co se hrají na jednom počítači (ve více lidech), například: Mortal Kombat, F1, Call of Duty, Party Beasts. Online - hry co se hrají na více počítačích, které spolu kominikují, například: League of Legends, VALORANT, GTA V, Stardew Valley. Ty se dále dají rozlišit dle typů připojení.
 
-## LAN
+### Splitscreen/Local Multiplayer
 
-## Peer to Peer (malá škálovatelnost, nebezpečí vůči cheaterům etc.)
+### LAN Party
 
-## Host (Host advantage)
+### Peer to Peer (malá škálovatelnost, nebezpečí vůči cheaterům etc.)
 
-## Client to server
+### Host (Host advantage)
+
+### Client to server
 
 ## Jak funguje posílání dat? (TCP UDP sockety porty)
 
 ## Synchonizace Stavu Hry
 
-Stav hry jsou informace, které posíláme z jednoho počítače na jiný
+Stav hry jsou informace, které posíláme v jeden okamžik z jednoho počítače na jiný
 
 ## Tick rate
 
