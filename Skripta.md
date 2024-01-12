@@ -20,16 +20,19 @@ LAN neboli Local Area Network je typ připojení používaný hlavně v minulost
 
 ### Peer to Peer
 
-![peertopeer](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/86325cc8-0664-4657-b472-9746786db7e9)
-
+![peertopeer](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/08c63950-71b1-4ac6-93a3-388ac25b5116)
 
 Peer to peer je typ sítě, kde si všichni klienti posílají informace navzájem. Problém s touto sítí je ten, že se stoupajícím počtem hráčů, stoupá počet připojení a taky tlak na počítač, takže se skoro nedá škálovat. Také tu není žadný server nebo autorita na zabezpečení, která by prověřovala posílané údaje a zamezila v cheatování. Tento typ připojení byl používán u **Age of Empires**, protože v podstatě minimalizoval ztráty pro hráče se špatným připojením.
 
 ### Host
 
+![host](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/93b0d4db-4d07-43b0-b0fb-eedfd7fff65b)
+
 Host síť je typ sítě, kde jeden z hráčů je vybrán jako host a zbytek se připojuje k němu a dostává data od něj. Host se chová jako takový server i když je sám hráčem. Oproti peer to peer modelu tak výrazně sníží počet připojení. Další výhoda je malá cena tohoto modelu, protože to moc nestojí, když všechno běží na jednom počítači. Nevýhoda tohoto modelu je takzvaná výhoda hosta, kde host v podstatě nemá latenci a tak se nehodí pro něco moc kompetetivního. Také je tu problém s tím, když se host odpojí od komunikace. Pokud nechceme, aby hra spadla musíme aplikovat nějakou metodu migrace hosta, aby se hostování hry přesunulo na jiného hráče. S tímto typem připojení přece jenom byly úspěšné indie kooperativní hry jako Terraria a Stardew Valley.
 
 ### Client to server
+
+![clientserver](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/bc6c7e07-cd19-44d7-8dfd-0eaaa952f432)
 
 Client to server je typ sítě, kde se hráči připojují k jednomu serveru a mezi ním a sebou si posílají data. Jeho výhody jsou zabezpečení, možnost mnoha připojení jako host síť, ale bez toho aby měl host výhodu. Nevýhody jsou, že využívání serveru nebo cloudových služeb může být drahé, takže by hra měla vyděávat aspoň cenu využití toho nebo těch serverů. V dnešní době je u her velice populární. Používají ho hlavně hry od většich firem.
 
@@ -45,11 +48,13 @@ TCP neboli Transmission Communication Protocol je protokol, který přesune data
 
 UDP neboli User Datagram Protocol je protokol, který narozdíl od TCP přesune data mnohem rychleji, ale často ne ve správném pořadí. UDP se ve hrách používá na věci, které se často mění jako stav objektů.
 
+![TCPvsUDP](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/963d6426-a945-422b-82c4-ce26f9bcdb40)
+
 ## Synchronizace Stavu Hry
 
 Stav hry jsou informace, které posíláme v jeden okamžik z jednoho počítače na jiný. Jako například pohyb obketů nebo pohyb figurky v šachách. Multiplayer hry se snaží co nejvíce synchronizovat stav hry u jednotlivých klientů, aby viděli to samé. K tomue je užitečný tick rate. Tick rate je kolikrát za sekundu posílá hra klientovi data například s tick ratem 40 hra pošle update každých 25 milisekund. 
 
-### Buffer (data, které uživatel již přijmul, ale ještě se mu neukazují)
+### Buffer
 
 Toto může být použito například i v případě pohybu hráče, kdy hráč pošle data server je prověří a pošle zpátky. Toto by ale fungovalo dobře jen u asynchronních her, kde nejsou potřeba updaty tak často jako u šachů nebo karetních her. Nefungovalo by to dobře, protože většinou se na tuto komunikaci používá UDP a to múže data dát ve špatném pořadí, takže je možné, že hráčova pozice by se lagovala různě podle infa co dostal jako poslední. K opravení tohoto problému se používá buffer. Buffer podzdrží chvíli uživateli nějaké data, aby je mohl dát zase do správného pořadí, jsou to tedy data, které uživatel již přijmul, ale ještě se mu neukazují. Často se používá například ve streamování nebo v aplikacích co pouští videa, aby se video nerozbilo například na youtube je jako tato šedá čárka.
 
