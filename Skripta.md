@@ -26,9 +26,19 @@ Host síť je typ sítě, kde jeden z hráčů je vybrán jako host a zbytek se 
 
 ### Client to server
 
+Client to server je typ sítě, kde se hráči připojují k jednomu serveru a mezi ním a sebou si posílají data. Jeho výhody jsou zabezpečení, možnost mnoha připojení jako host síť, ale bez toho aby měl host výhodu. Nevýhody jsou, že využívání serveru nebo cloudových služeb může být drahé, takže by hra měla vyděávat aspoň cenu využití toho nebo těch serverů. V dnešní době je u her velice populární. Používají ho hlavně hry od většich firem.
 
+## Posilání dat
 
-## Jak funguje posílání dat? (TCP UDP sockety porty)
+Aby mezi sebou mohly počítače komunikovat a posílat si data musí si otevřít socket, který se skládá z IP adresy(adresy počítače nebo routeru) a portu například: 123.123.123.123:80. Porty se využívají abychom rozeznali různé protokoly nebo služby co běží na jednom počítači. Také router pozná podle portu, který počítač v síti si službu vyžádal. Používají se také protokoly k posílání dat, které posílaným datům dávají instrukce jakým způsobem se mají dostat ke klientovi nebo serveru. Nejpoužívanější protokoly jsou TCP a UDP.
+
+### TCP
+
+TCP neboli Transmission Communication Protocol je protokol, který přesune data z jednoho počítače na druhý pomaleji a za trošku větší cenu výpočetního výkonu, ale za to důkladně a ve správném pořadí. TCP se ve hrách používá například k navázání komunikace s uživatelem a k přesouvání dat jako jsou informace o uživateli.
+
+### UDP
+
+UDP neboli User Datagram Protocol je protokol, který narozdíl od TCP přesune data mnohem rychleji, ale často ne ve správném pořadí. UDP se ve hrách používá na věci, které se často mění jako stav objektů.
 
 ## Synchronizace Stavu Hry
 
