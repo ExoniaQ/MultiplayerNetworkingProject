@@ -6,7 +6,7 @@ Síťová integrace je, jak nám sám název napovídá, využití (integrace) s
 
 ## Offline a Online hry
 
-Multiplayerové hry lze rozdělit na dva typy. OFFline - hry co se hrají na jednom počítači (ve více lidech), například: Mortal Kombat, F1, Call of Duty, Party Beasts. Online - hry co se hrají na více počítačích, které spolu kominikují, například: League of Legends, VALORANT, GTA V, Stardew Valley. Ty se dále dají rozlišit dle typů připojení.
+Multiplayerové hry lze rozdělit na dva typy. Offline - hry co se hrají na jednom počítači (ve více lidech), například: Mortal Kombat, F1, Call of Duty, Party Beasts. Online - hry co se hrají na více počítačích, které spolu kominikují, například: League of Legends, VALORANT, GTA V, Stardew Valley. Ty se dále dají rozlišit dle typů připojení.
 
 ### Splitscreen/Local Multiplayer
 
