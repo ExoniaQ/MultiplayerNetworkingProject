@@ -14,6 +14,8 @@ Local multiplayer neboli splitscreen(roždělená obrazovka) je žánr multiplay
 
 ### LAN
 
+![lantopology](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/074bbaa9-8261-4140-af6e-2cf5e1dfa622)
+
 LAN neboli Local Area Network je typ připojení používaný hlavně v minulost, kdy sítě nebyly tak rychlé, aby se na nich něco dalo hrát. Spočívá v tom, že počítače hráčů jsou připojeny k serveru napřímo kabelem. Jeho výhody jsou velmi nízká latence a to a malé zatížení serveru. V dnešní době, a předpokládám že bude i nadále, je používán hlavně v kompetetivních hrách ve velkých nebo malých turnajích.
 
 ### Peer to Peer
@@ -42,15 +44,21 @@ UDP neboli User Datagram Protocol je protokol, který narozdíl od TCP přesune 
 
 ## Synchronizace Stavu Hry
 
-Stav hry jsou informace, které posíláme v jeden okamžik z jednoho počítače na jiný. Jako například pohyb obketů nebo pohyb figurky v šachách. Multiplayer hry se snaží co nejvíce synchronizovat stav hry u jednotlivých klientů, aby viděli to samé. K tomue je užitečný tick rate. Tick rate je kolikrát za sekundu posílá hra klientovi data například s tick ratem 40 hra pošle update každých 25 milisekund. Toto může být použito například i v případě pohybu uživatele, kdy uživatel
+Stav hry jsou informace, které posíláme v jeden okamžik z jednoho počítače na jiný. Jako například pohyb obketů nebo pohyb figurky v šachách. Multiplayer hry se snaží co nejvíce synchronizovat stav hry u jednotlivých klientů, aby viděli to samé. K tomue je užitečný tick rate. Tick rate je kolikrát za sekundu posílá hra klientovi data například s tick ratem 40 hra pošle update každých 25 milisekund. 
 
 ### Buffer (data, které uživatel již přijmul, ale ještě se mu neukazují)
 
+Toto může být použito například i v případě pohybu hráče, kdy hráč pošle data server je prověří a pošle zpátky. Toto by ale fungovalo dobře jen u asynchronních her, kde nejsou potřeba updaty tak často jako u šachů nebo karetních her. Nefungovalo by to dobře, protože většinou se na tuto komunikaci používá UDP a to múže data dát ve špatném pořadí, takže je možné, že hráčova pozice by se lagovala různě podle infa co dostal jako poslední. K opravení tohoto problému se používá buffer. Buffer podzdrží chvíli uživateli nějaké data, aby je mohl dát zase do správného pořadí, jsou to tedy data, které uživatel již přijmul, ale ještě se mu neukazují. Často se používá například ve streamování nebo v aplikacích co pouští videa, aby se video nerozbilo například na youtube je jako tato šedá čárka.
+
 ![bufferscreen](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/db5458b5-5c0c-4c85-908c-cb9748ef670b)
 
-### Client-side prediction (Rubber banding)
+### Client-side prediction
+
+Dále můžeme mít problém, když na sekundu ztratíme připojení a pohyb objektů ve hře se nachvíli sekne a poté zase pustí. V těchzo případech používáme Client-side prediction (předvídání ze strany klienta). Je to předvídání kam se objekt pohne pokud nedostaneme jeho pozici od serveru, například, když hráč jde rovně tak předvídáme, že půjde dál rovně. Také se tomu často říká rubber banding, protože při synchronizaci pozice objektu na serveru a u klienta se objekt pohne tam a zpátky jako guma.
 
 ### Client authoritative control (Favor the shooter systém)
+
+Další problém je aby se klient mohl dobře pohybovat a nemusel čekat například sekundu 
 
 ## Networking frameworky
 
