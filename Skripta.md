@@ -42,13 +42,11 @@ UDP neboli User Datagram Protocol je protokol, který narozdíl od TCP přesune 
 
 ## Synchronizace Stavu Hry
 
-Stav hry jsou informace, které posíláme v jeden okamžik z jednoho počítače na jiný. Jako například pohyb obketů nebo pohyb figurky v šachách. Multiplayer hry se snaží co nejvíce synchronizovat stav hry u jednotlivých klientů, aby viděli to samé.
-
-### Tick rate
-
-### Asynchronní hry
+Stav hry jsou informace, které posíláme v jeden okamžik z jednoho počítače na jiný. Jako například pohyb obketů nebo pohyb figurky v šachách. Multiplayer hry se snaží co nejvíce synchronizovat stav hry u jednotlivých klientů, aby viděli to samé. K tomue je užitečný tick rate. Tick rate je kolikrát za sekundu posílá hra klientovi data například s tick ratem 40 hra pošle update každých 25 milisekund. Toto může být použito například i v případě pohybu uživatele, kdy uživatel
 
 ### Buffer (data, které uživatel již přijmul, ale ještě se mu neukazují)
+
+![bufferscreen](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/db5458b5-5c0c-4c85-908c-cb9748ef670b)
 
 ### Client-side prediction (Rubber banding)
 
