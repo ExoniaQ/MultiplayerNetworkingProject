@@ -18,11 +18,12 @@ LAN neboli Local Area Network je typ připojení používaný hlavně v minulost
 
 ### Peer to Peer
 
-Peer to peer je typ sítě, kde si všichni klienti posílají informace navzájem. Problém s touto sítí je ten, že se stoupajícím počtem hráčů, stoupá počet připojení a taky tlak na počítač, takže se skoro nedá škálovat. Také tu není žadný server nebo autorita na zabezpečení, která by prověřovala posílané údaje a zamezila v cheatování. Tento typ připojení byl používán hlavně u Age of Empires, protože v podstatě minimalizoval ztráty pro hráče se špatným připojením.
+Peer to peer je typ sítě, kde si všichni klienti posílají informace navzájem. Problém s touto sítí je ten, že se stoupajícím počtem hráčů, stoupá počet připojení a taky tlak na počítač, takže se skoro nedá škálovat. Také tu není žadný server nebo autorita na zabezpečení, která by prověřovala posílané údaje a zamezila v cheatování. Tento typ připojení byl používán hlavně u Age of Empires, protože v p![htao](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/c61d2520-56a8-4efa-89c7-cee76698c9f8)
+odstatě minimalizoval ztráty pro hráče se špatným připojením.
 
 ### Host (Host advantage)
 
-
+Host síť je typ sítě, kde jeden z hráčů je vybrán jako host a zbytek se připojuje k němu a dostává data od něj. Host se chová jako takový server i když je sám hráčem. Oproti peer to peer modelu tak minimalizuje počet připojení 
 
 ### Client to server
 
