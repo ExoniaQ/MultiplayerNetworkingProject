@@ -42,17 +42,17 @@ UDP neboli User Datagram Protocol je protokol, který narozdíl od TCP přesune 
 
 ## Synchronizace Stavu Hry
 
-Stav hry jsou informace, které posíláme v jeden okamžik z jednoho počítače na jiný
+Stav hry jsou informace, které posíláme v jeden okamžik z jednoho počítače na jiný. Jako například pohyb obketů nebo pohyb figurky v šachách. Multiplayer hry se snaží co nejvíce synchronizovat stav hry u jednotlivých klientů, aby viděli to samé.
 
-## Tick rate
+### Tick rate
 
-## Asynchronní hry
+### Asynchronní hry
 
-## Buffer (data, které uživatel již přijmul, ale ještě se mu neukazují)
+### Buffer (data, které uživatel již přijmul, ale ještě se mu neukazují)
 
-## Client-side prediction (Rubber banding)
+### Client-side prediction (Rubber banding)
 
-## Client authoritative control (Favor the shooter systém)
+### Client authoritative control (Favor the shooter systém)
 
 ## Networking frameworky
 
