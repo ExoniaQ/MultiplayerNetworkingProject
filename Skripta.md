@@ -18,13 +18,15 @@ LAN neboli Local Area Network je typ připojení používaný hlavně v minulost
 
 ### Peer to Peer
 
-Peer to peer je typ sítě, kde si všichni klienti posílají informace navzájem. Problém s touto sítí je ten, že se stoupajícím počtem hráčů, stoupá počet připojení a taky tlak na počítač, takže se skoro nedá škálovat. Také tu není žadný server nebo autorita na zabezpečení, která by prověřovala posílané údaje a zamezila v cheatování. Tento typ připojení byl používán hlavně u Age of Empires, protože v podstatě minimalizoval ztráty pro hráče se špatným připojením.
+Peer to peer je typ sítě, kde si všichni klienti posílají informace navzájem. Problém s touto sítí je ten, že se stoupajícím počtem hráčů, stoupá počet připojení a taky tlak na počítač, takže se skoro nedá škálovat. Také tu není žadný server nebo autorita na zabezpečení, která by prověřovala posílané údaje a zamezila v cheatování. Tento typ připojení byl používán u **Age of Empires**, protože v podstatě minimalizoval ztráty pro hráče se špatným připojením.
 
-### Host (Host advantage)
+### Host
 
-Host síť je typ sítě, kde jeden z hráčů je vybrán jako host a zbytek se připojuje k němu a dostává data od něj. Host se chová jako takový server i když je sám hráčem. Oproti peer to peer modelu tak minimalizuje počet připojení 
+Host síť je typ sítě, kde jeden z hráčů je vybrán jako host a zbytek se připojuje k němu a dostává data od něj. Host se chová jako takový server i když je sám hráčem. Oproti peer to peer modelu tak výrazně sníží počet připojení. Další výhoda je malá cena tohoto modelu, protože to moc nestojí, když všechno běží na jednom počítači. Nevýhoda tohoto modelu je takzvaná výhoda hosta, kde host v podstatě nemá latenci a tak se nehodí pro něco moc kompetetivního. Také je tu problém s tím, když se host odpojí od komunikace. Pokud nechceme, aby hra spadla musíme aplikovat nějakou metodu migrace hosta, aby se hostování hry přesunulo na jiného hráče. S tímto typem připojení přece jenom byly úspěšné indie kooperativní hry jako Terraria a Stardew Valley.
 
 ### Client to server
+
+
 
 ## Jak funguje posílání dat? (TCP UDP sockety porty)
 
