@@ -74,7 +74,43 @@ Aby vám s tímto pomohli tak existují networking frameworky. Networking framew
 
 ## Ukázka
 
-V této ukázce bych chtěl ukázat, jak vytvořit multiplayer hru v Unity s pomocí networking frameworku [Mirror](https://mirror-networking.com) a pluginu [ParrelSync]([Mirror](https://mirror-networking.com)).
+V této ukázce bych chtěl ukázat, jak vytvořit multiplayer hru v Unity s pomocí networking frameworku [Mirror](https://mirror-networking.com) a pluginu [ParrelSync](https://github.com/VeriorPies/ParrelSync). Mirror je networking framework, který je zdarma a pomůže nám s online aspektem projektu. ParrelSync je plugin do Unity, který nám umožní projekt naklonovat a replikovat změny, co provedeme, abychom nemuseli pokaždé buildovat k testování online aspektu. Nejdřív Mirror a Parrelsync nainstalujeme a importujeme do Unity.
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/8f2abf6f-e2cc-47b4-9f88-87816525be59)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/cdea8c00-74e0-4be2-af24-639f373b6228)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/64f2c70d-0745-40d5-ab33-5dff80595a21)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/f93c3f3b-3688-4b91-a62e-80db41a9b19e)
+
+Po importování ParrelSyncu by se měl objevit na horní liště. Klikneme na něj pravým a vytvoříme si nový clone projektu.
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/39ca3ffb-2680-41d0-9f52-0fbd863ab01f)
+
+Poté udělejte novou scénu nebo vyberte Sample Scene a přidejte ji do build settings.
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/50240b51-c839-453d-b108-c7ac9991d94c)
+
+Poté udělejte nový empty GameObject, pojmenujte ho NetworkManager a přidejte k němu tyto scripty.
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/8849bb48-8ec5-4fc9-afc2-bb20e13b3c94)
+
+Poté si vytvořte nějakou plochu.
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/f3046ba5-01de-48b6-a02f-d03062be2f47)
+
+Poté si vytvořte Capsule, která bude našim hráčem. Přidejte ji NetworkTransfer script. Ve scriptu změňte Sync Direction na Client To Server, aby klient měl autoritu hýbat se svoji postavou. Přidejte Capsuli zatím prázdný PlayerScript, přejmenujte ji na Player. Přitáhněte ji dolu k souborům, aby se vytvořil prefab. Poté ji smažte.
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/95e8aa57-9e06-4db7-a9fd-3c5b4a9dbe23)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/144e0eb6-efae-4846-96f1-5bfefcafb4dc)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/5c111e94-5665-4c6d-8271-13f588e2a675)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/d8b8cf53-24a6-4bad-8a6a-fc3ed6b50d0f)
+
+
 
 ## Shrnutí
 
