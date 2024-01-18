@@ -92,13 +92,19 @@ Poté udělejte novou scénu nebo vyberte Sample Scene a přidejte ji do build s
 
 ![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/50240b51-c839-453d-b108-c7ac9991d94c)
 
-Poté udělejte nový empty GameObject, pojmenujte ho NetworkManager a přidejte k němu tyto scripty.
+Poté udělejte nový empty GameObject, pojmenujte ho NetworkManager a přidejte k němu tyto componenty.
 
 ![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/8849bb48-8ec5-4fc9-afc2-bb20e13b3c94)
 
-Poté si vytvořte nějakou plochu. Na plochu si 
+Poté si vytvořte nějakou plochu. Poté si vytvořte empty GameObject a přidejte ho na plochu můžete ho pojmenovat jak chcete, já ho pojmenuji SpawnPoint. Poté mu přidejte component NetworkStartPosition. Poté naduplikujte tento GameObject a přesunťe jej třeba na jiné místo na ploše.
 
 ![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/f3046ba5-01de-48b6-a02f-d03062be2f47)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/5f198eac-7a73-4ceb-8598-7d933aa8c47d)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/e474aadd-a7e6-4b6f-833f-b994d807ffd2)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/dfba5a24-12ad-4bdd-9509-e885ef21a2cb)
 
 Poté si vytvořte Capsule, která bude našim hráčem. Přidejte ji NetworkTransfer script. Ve scriptu změňte Sync Direction na Client To Server, aby klient měl autoritu hýbat se svoji postavou. Přidejte Capsuli zatím prázdný PlayerScript, přejmenujte ji na Player. Přitáhněte ji dolu k souborům, aby se vytvořil prefab. Poté ji smažte.
 
@@ -145,6 +151,14 @@ namespace QuickStart
     }
 }
 ```
+
+Poté můžete hru spustit. Vlevém horním rohu se objeví menu. Nejdříve musí někdo začít hostovat kliknutím na tlačítko a potom se client může také kliknutím připojit.
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/97a58dbb-cda8-499c-be98-02d14b134f06)
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/ec7d99c1-dbd4-4588-a458-10a135f65133)
+
+Po provedení tohoto tutoriálu bychom měli mít template na Unity multiplayer hru, který se dá dále upravovat.
 
 ## Shrnutí
 
