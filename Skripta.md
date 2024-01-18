@@ -118,7 +118,7 @@ Potom rozklikněte NetworkManager přetáhněte Player prefab z dokumentů do ko
 
 Poté si zkopírujte tento script do PlayerScript.
 
-`using Mirror;
+` using Mirror;
 using UnityEngine;
 
 namespace QuickStart
@@ -142,7 +142,7 @@ namespace QuickStart
             transform.Translate(0, 0, moveZ);
         }
     }
-}`
+} `
 
 ## Shrnutí
 
