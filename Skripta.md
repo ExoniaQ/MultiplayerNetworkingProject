@@ -96,7 +96,7 @@ Poté udělejte nový empty GameObject, pojmenujte ho NetworkManager a přidejte
 
 ![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/8849bb48-8ec5-4fc9-afc2-bb20e13b3c94)
 
-Poté si vytvořte nějakou plochu.
+Poté si vytvořte nějakou plochu. Na plochu si 
 
 ![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/f3046ba5-01de-48b6-a02f-d03062be2f47)
 
@@ -110,7 +110,39 @@ Poté si vytvořte Capsule, která bude našim hráčem. Přidejte ji NetworkTra
 
 ![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/d8b8cf53-24a6-4bad-8a6a-fc3ed6b50d0f)
 
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/1c1559b5-819b-41f3-9e4c-cb23e961f3f2)
 
+Potom rozklikněte NetworkManager přetáhněte Player prefab z dokumentů do kolonky Player Prefab a změnte Player Spawn Method na Round Robin.
+
+![image](https://github.com/ExoniaQ/MultiplayerNetworkingProject/assets/75218536/af0e6c98-2bbc-4254-9b60-cb54880ff619)
+
+Poté si zkopírujte tento script do PlayerScript.
+
+`using Mirror;
+using UnityEngine;
+
+namespace QuickStart
+{
+    public class PlayerScript : NetworkBehaviour
+    {
+        public override void OnStartLocalPlayer()
+        {
+            Camera.main.transform.SetParent(transform);
+            Camera.main.transform.localPosition = new Vector3(0, 0, 0);
+        }
+
+        void Update()
+        {
+            if (!isLocalPlayer) { return; }
+
+            float moveX = Input.GetAxis("Horizontal") * Time.deltaTime * 110.0f;
+            float moveZ = Input.GetAxis("Vertical") * Time.deltaTime * 4f;
+
+            transform.Rotate(0, moveX, 0);
+            transform.Translate(0, 0, moveZ);
+        }
+    }
+}`
 
 ## Shrnutí
 
