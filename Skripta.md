@@ -118,7 +118,7 @@ Potom rozklikněte NetworkManager přetáhněte Player prefab z dokumentů do ko
 
 Poté si zkopírujte tento script do PlayerScript.
 
-```
+```cs
 using Mirror;
 using UnityEngine;
 
