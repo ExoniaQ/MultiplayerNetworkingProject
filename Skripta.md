@@ -72,6 +72,10 @@ Další problém je aby se klient mohl dobře pohybovat a nemusel čekat napří
 
 Aby vám s tímto pomohli tak existují networking frameworky. Networking frameworky jsou sady nástrojů a knihoven k vyřešení věcí jako jsou sockety, porty, synchronizace a jiných problémů. Tímto se můžete soustředit na vývoj hry místo řešení problémů, co už vyřešil někdo jiný. Příklady populárních networking frameworků jsou Photon, Mirror, FishNet a GameSparks.
 
+## Ukázka
+
+V této ukázce bych chtěl ukázat, jak vytvořit multiplayer hru v Unity s pomocí networking frameworku [Mirror](https://mirror-networking.com) a pluginu [ParrelSync]([Mirror](https://mirror-networking.com)).
+
 ## Shrnutí
 
 Síťová integrace je důležitý proces při vytváření multiplayerových her. Je to cesta k propojení hráčů, aby si spolu mohli zahrát přes internet. Je to těžký a komplexní proces, který zahrnuje kroky jako připojení počítačů ke komunikaci a synchronizaci stavu hry mezi klienty a serverem.
